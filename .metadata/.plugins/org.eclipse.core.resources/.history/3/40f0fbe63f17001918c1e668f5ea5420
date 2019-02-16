@@ -1,0 +1,8 @@
+package com.kewei.mybatis.been;
+
+public class Blog {
+	
+	private int id;
+	private String title;
+
+}

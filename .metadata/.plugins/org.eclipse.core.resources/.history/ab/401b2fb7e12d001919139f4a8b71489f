@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+     
+    <!-- car 对象 -->
+    <bean name="car" class="spring.kewei.pojo.Car">
+    	<!-- 属性注入  通过 value 注入 -->
+    	<property name="name" value="daben"></property>
+    	<property name="color" value="white"></property>
+    </bean>
+        
+        
+    <!-- person 对象， 里面包含了 Car对象 -->    
+    <bean name="Person1" class="spring.kewei.pojo.Person">
+    	<!-- 属性注入  通过 value 注入  name 的值对应实体类的属性   -->
+    	<property name="name" value="Devin"></property>
+    	<property name="age" value="18"></property>
+    	<property name="car" ref="car"></property>
+    </bean>
+        
+</beans>

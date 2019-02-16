@@ -1,0 +1,12 @@
+package spring.kewei.factory;
+
+import spring.kewei.pojo.Person;
+
+public class PersonFactory {
+
+	public static Person createPerson(){
+		
+		System.out.println("静态工厂创建Person");
+		return new Person();
+	}
+}

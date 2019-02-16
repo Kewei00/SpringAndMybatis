@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- 配置文件根节点  -->
+<configuration>
+
+	
+	<!-- 引入数据库连接配置 -->
+	<properties  resource="db.properties"></properties>
+	
+	<!-- 定义数据源  environments标签内部可配置多个数据源-->
+	<environments default="development">
+	
+		<!-- 指定数据库环境配置 -->
+		<environment id="development">
+		
+			<!-- 获取数据库连接实例的数据源，一般使用连接池的方式 -->
+			 <dataSource type="POOLED">
+		        <property name="driver" value="${jdbc.driver}"/>
+		        <property name="url" value="${jdbc.url}"/>
+		        <property name="username" value="${jdbc.username}"/>
+		        <property name="password" value="${jdbc.password}"/>
+	      	</dataSource>	
+			
+		</environment>
+		
+		<!-- <environment id="test"></environment>
+		<environment id="production"></environment> -->
+	</environments>
+	
+	
+	
+	
+	
+</configuration>

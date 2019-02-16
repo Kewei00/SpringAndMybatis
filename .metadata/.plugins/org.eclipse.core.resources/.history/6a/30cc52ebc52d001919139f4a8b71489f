@@ -1,0 +1,7 @@
+package spring.kewei.pojo;
+
+public class IOCTest {
+	
+	@Test
+
+}

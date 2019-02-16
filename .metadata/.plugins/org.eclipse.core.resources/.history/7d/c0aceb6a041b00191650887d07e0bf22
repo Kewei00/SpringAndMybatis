@@ -1,0 +1,71 @@
+package 从m.kewei.mybatis.mapper;
+
+import org.apache.ibatis.session.SqlSession;
+import org.junit.Test;
+
+import com.kewei.mybatis.been.Blog;
+import com.kewei.mybatis.mapper.BlogMapper;
+import com.kewei.mybatis.util.MyBatisUtil;
+
+public class BlogMapperTest {
+
+	@Test
+	public void testSelectBlog(){
+		// 获取 session
+		SqlSession session = MyBatisUtil.getSqlsession();
+		// 通过反射 获取  BlogMapper 对象
+		BlogMapper blogMapper = session.getMapper(BlogMapper.class);
+		Blog blog = blogMapper.selectBlog(1);
+		
+		session.close();
+		
+		System.out.println(blog);
+		
+	}
+	
+	@Test   // 使用 mapper.xml  不写接口配置的方式
+	public void testSelectNoInterface(){
+		// 获取 session
+		SqlSession session = MyBatisUtil.getSqlsession();
+		
+		Blog blog = session.selectOne("com.kewei.mybatis.mapper.BlogMapper.selectBlog",1);
+		
+		session.close();
+		
+		System.out.println(blog);
+	}
+	
+	@Test
+	public void testSelectDesc(){
+		// 获取 session
+		SqlSession session = MyBatisUtil.getSqlsession();
+		// 通过反射 获取  BlogMapper 对象
+		BlogMapper blogMapper = session.getMapper(BlogMapper.class);
+		Blog blog = blogMapper.selectDesc("title");
+		
+		session.close();
+		
+		System.out.println(blog);
+		
+	}
+	
+	
+	@Test
+	public void selectActiveBlig(){
+		// 获取 session
+		SqlSession session = MyBatisUtil.getSqlsession();
+		// 通过反射 获取  BlogMapper 对象
+		BlogMapper blogMapper = session.getMapper(BlogMapper.class);
+		
+		Blog blog2 = new Blog();
+		blog2.setState("");
+		blog2.setTitle("%o%");
+		
+		Blog blog = blogMapper.selectActiveBlig(blog2);
+		
+		session.close();
+		
+		System.out.println(blog);
+	}
+	
+}

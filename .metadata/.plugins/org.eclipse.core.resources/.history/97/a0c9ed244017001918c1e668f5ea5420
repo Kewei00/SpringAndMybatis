@@ -1,0 +1,5 @@
+package com.kewei.mybatis.mapper;
+
+public interface BlogMapper {
+
+}

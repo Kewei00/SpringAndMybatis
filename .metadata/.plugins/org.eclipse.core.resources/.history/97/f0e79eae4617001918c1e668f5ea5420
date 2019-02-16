@@ -1,0 +1,24 @@
+package 从m.kewei.mybatis.mapper;
+
+import org.apache.ibatis.session.SqlSession;
+import org.junit.Test;
+
+import com.kewei.mybatis.been.Blog;
+import com.kewei.mybatis.util.MyBatisUtil;
+
+public class BlogMapperTest {
+
+	@Test
+	public void testSelectBlog(){
+		// 获取 session
+		SqlSession session = MyBatisUtil.getSqlsession();
+		// 通过反射 获取  BlogMapper 对象
+		BlogMapper blogMapper = session.getMapper(BlogMapper.class);
+		Blog blog = blogMapper.selectBlog(1);
+		
+		session.close();
+		
+		System.out.println(blog);
+		
+	}
+}

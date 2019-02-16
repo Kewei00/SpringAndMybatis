@@ -1,0 +1,13 @@
+package spring.kewei.pojo;
+
+public class IOCTest {
+	
+	public void test(){
+		// 读取 spring 配置文件  创建容器
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		//查找对象
+		Object P = (Person)context.getBean("p");
+		System.out.println(p);
+	}
+
+}

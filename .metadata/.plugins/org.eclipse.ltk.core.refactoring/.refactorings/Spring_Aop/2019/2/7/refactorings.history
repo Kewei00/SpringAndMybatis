@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;spring.kewei.advice.Thing&apos; to &apos;ThingAdvice&apos;&#x0D;&#x0A;- Original project: &apos;Spring_Aop&apos;&#x0D;&#x0A;- Original element: &apos;spring.kewei.advice.Thing&apos;&#x0D;&#x0A;- Renamed element: &apos;spring.kewei.advice.ThingAdvice&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Thing&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;spring.kewei.advice{Thing.java[Thing" matchStrategy="1" name="ThingAdvice" qualified="false" references="true" similarDeclarations="false" stamp="1550203138083" textual="false" version="1.0"/>
+</session>

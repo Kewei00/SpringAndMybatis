@@ -1,0 +1,19 @@
+rootLogger.level=DEBUG
+rootLogger.appenderRefs=${appenders}
+rootLogger.appenderRef.console.ref=STDOUT
+rootLogger.appenderRef.rollingFileAppender.ref=rollingFile
+
+#sql 若INFO级别时，与数据库交互时是不会打印sql语句
+log4j.logger.org.mybatis = DEBUG
+log4j.logger.java.sql = DEBUG
+log4j.logger.java.sql.Statement = DEBUG
+log4j.logger.java.sql.ResultSet = DEBUG
+log4j.logger.java.sql.Statement = DEBUG
+
+
+log4j.rootLogger=DEBUG,A1
+log4j.logger.org.mybatis = DEBUG
+log4j.appender.A1=org.apache.log4j.ConsoleAppender
+log4j.appender.CONSOLE.Encoding=UTF-8
+log4j.appender.A1.layout = org.apache.log4j.PatternLayout
+log4j.appender.A1.layout.ConversionPattern =%-d{yyyy-MM-dd HH:mm:ss.SSS} %c %m(%L) %n

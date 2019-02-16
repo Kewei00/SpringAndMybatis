@@ -1,0 +1,5 @@
+jdbc.driver=com.mysql.jdbc.Driver
+#jdbc.url=jdbc:oracle:thin:@10.31.61.5:1521:orcl
+jdbc.url=jdbc:mysql://localhost:3306/blog1701
+jdbc.username=root
+jdbc.password=123456

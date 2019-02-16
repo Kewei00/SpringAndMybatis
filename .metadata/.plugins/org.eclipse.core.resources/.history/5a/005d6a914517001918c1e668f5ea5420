@@ -1,0 +1,60 @@
+package com.kewei.mybatis.been;
+
+import java.util.List;
+
+public class Blog {
+	
+	private Integer id;
+	private String title;
+	private int author;
+	private String state;
+	private Boolean featured;
+	private String style;
+//	private List<Post> posts;
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	public int getAuthor() {
+		return author;
+	}
+	public void setAuthor(int author) {
+		this.author = author;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public Boolean getFeatured() {
+		return featured;
+	}
+	public void setFeatured(Boolean featured) {
+		this.featured = featured;
+	}
+	public String getStyle() {
+		return style;
+	}
+	public void setStyle(String style) {
+		this.style = style;
+	}
+	
+	@Override
+	public String toString() {
+		return "Blog [id=" + id + ", title=" + title + ", state=" + state + ", featured=" + featured + ", style="
+				+ style + "]";
+	}
+	
+	
+
+}

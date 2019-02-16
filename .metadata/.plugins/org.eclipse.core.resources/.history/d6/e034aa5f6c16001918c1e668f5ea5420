@@ -1,0 +1,5 @@
+package com.kewei.mybatis.been;
+
+public class Blog {
+
+}

@@ -1,0 +1,17 @@
+package spring.kewei.pojo;
+
+import org.junit.Test;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class RunWithTest {
+
+	//属性注入
+	@RunWithTest
+	public void testproperty(){
+		
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext("applicationContext-Injection.xml");
+		Person p = (Person) context.getBean("Person1");
+		System.out.println(p);
+	}
+}

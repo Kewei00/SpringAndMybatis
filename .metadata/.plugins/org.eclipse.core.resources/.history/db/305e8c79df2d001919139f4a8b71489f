@@ -1,0 +1,12 @@
+package spring.kewei.pojo;
+
+import org.junit.Test;
+
+public class Injection {
+	
+	@Test
+	public void testSet(){
+		
+	}
+
+}

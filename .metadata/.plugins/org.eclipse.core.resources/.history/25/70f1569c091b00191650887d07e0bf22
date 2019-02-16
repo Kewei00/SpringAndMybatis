@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 对应未来程序应用的接口  dao层 接口的实现 包和接口放在一起  通过以下的接口去寻找对应的实现类  代替 implement-->
+<mapper namespace="com.kewei.mybatis.mapper.BlogMapper">
+
+	<!-- 使用  resultMap 的方式 来实现返回值  resultMp -->
+	<!-- <resultMap type="Blog" id="blogResultMap">
+		id 必填 对应数据库的表的字段
+		<id column="id" property="id"/>
+		<result  column="state" property="state"  />
+		
+			
+	</resultMap> -->
+	
+	
+	<!-- 若没有定义别名 则需要指定出类型的绝对路径 -->
+	<!-- <select id="selectBlog" parameterType="int" resultType="com.kewei.mybatis.been.Blog" > -->
+	
+	<!-- 若没有定义别名 则需要指定出类型的绝对路径 -->
+	<select id="selectBlog" parameterType="int" resultType="Blog" >
+		select * from Blog  where id = #{id,jdbcType=INTEGER}
+	</select>
+	
+	<!-- 使用 $ 符号的方式来传参  $ 是一个替换的作用 可以写成 $(value) 占位  $属于一种拼接的字符串  -->
+	<!-- <select id="selectBlog" parameterType="int" resultType="Blog" >
+		select * from Blog  where title like '${value}'
+		select * from Blog  where title like '%${value}%'
+	</select> -->
+	
+	<!-- <select id="selectDesc" parameterType="String" resultType="Blog" >
+		select * from Blog  where title like '${value}'
+		select * from Blog  order by convert(${value} USING UTF8)
+	</select> -->
+
+
+				<!-- **************动态sql**************** -->
+
+	
+	<!-- <select id="selectActiveBlig" parameterType="String" resultType="Blog" >
+		
+		select * from Blog  
+		where state = "action"
+		<choose>
+			<when test="title != null and title != ''">
+				and lower(title) like lower(#{title})
+			</when>
+			<when test="style != null and style != ''">
+				 and style = #{style}
+			</when>
+			<otherwise>
+				and author_id = 2
+			</otherwise>
+		
+		</choose>
+	</select> -->
+	
+	<!-- where 标签的使用 -->
+	<select id="selectFortitle"  parameterType="String"   resultType="Blog" >
+		select * from Blog
+		<where>
+			<if test="state != null and state != ''">
+				 state = #{state}
+			</if> 
+			<if test="title != null and title != ''">
+				and title = #{title}
+			</if> 
+			<if test="author_id != null and author_id != ''">
+				and author_id = #{author_id}
+			</if> 
+		</where>
+	</select>
+	
+	
+</mapper>

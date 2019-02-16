@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+     
+    <bean name="car" class="spring.kewei.pojo.Car">
+    
+    </bean>
+        
+    <bean name="Person1" class="spring.kewei.pojo.Person">
+    	<!-- 属性注入  通过 value 注入 -->
+    	<property name="name" value="Devin"></property>
+    	<property name="age" value="18"></property>
+    	
+    </bean>
+        
+</beans>

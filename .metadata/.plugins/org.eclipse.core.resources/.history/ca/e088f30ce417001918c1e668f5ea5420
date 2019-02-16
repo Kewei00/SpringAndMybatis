@@ -1,0 +1,11 @@
+package com.kewei.mybatis.mapper;
+
+import com.kewei.mybatis.been.Blog;
+
+public interface BlogMapper {
+	
+	Blog selectBlog(Integer id);
+	
+	Blog selectDesc(Integer id);
+
+}

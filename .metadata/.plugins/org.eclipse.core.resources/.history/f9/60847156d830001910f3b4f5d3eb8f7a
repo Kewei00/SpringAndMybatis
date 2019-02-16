@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:aop="http://www.springframework.org/schema/aop"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/aop 
+         http://www.springframework.org/schema/aop/spring-aop.xsd">
+        
+
+	<!-- 配置注解扫描 : 扫描包下面的所有的java类 通过类的注解设置来动态创建对象-->
+	<context:component-scan base-package="spring.kewei.pojo"></context:component-scan>
+
+	<!-- 目标对象 -->>
+	<bean name="userService" class="spring.kewei.service.UserServiceImpl"></bean>
+
+	<!-- 通知对象 -->
+	<bean name="thingAdvice" class="spring.kewei.advice.ThingAdvice"></bean>
+
+	<bean name="car2" class="spring.kewei.pojo.Car">
+		<property name="name" value="mobai"></property>
+		<property name="color"  value="blue"></property>
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+
+
+</beans>

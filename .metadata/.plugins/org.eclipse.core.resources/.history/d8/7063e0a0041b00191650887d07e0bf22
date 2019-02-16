@@ -1,0 +1,16 @@
+package com.kewei.mybatis.mapper;
+
+import com.kewei.mybatis.been.Blog;
+
+public interface BlogMapper {
+	
+	Blog selectBlog(Integer id);
+	
+	// 
+	Blog selectDesc(String title);
+
+	Blog selectActiveBlig(Blog title);
+	
+	Blog selectFortitle(String title);
+
+}

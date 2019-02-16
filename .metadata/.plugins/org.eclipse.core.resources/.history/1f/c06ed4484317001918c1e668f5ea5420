@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 对应未来程序应用的接口  dao层 接口的实现 包和接口放在一起  通过以下的接口去寻找对应的实现类  代替 implement-->
+<mapper namespace="org.mybatis.example.BlogMapper">
+
+	<!-- <select id="selectBlog" parameterType="int" resultType="Blog" > -->
+	<select id="selectBlog" parameterType="int" resultType="com.kewei.mybatis.been.Blog" >
+		select * from Blog  where id = #{id}
+	</select>
+	
+	<!-- <insert id="addBlog" parameterType="int" resultType="Blog" >
+	
+	</insert>
+	
+	<delete id="selectBlog" parameterType="int" resultType="Blog" >
+	
+	</delete>
+	
+	<update id="updateBlog" parameterType="int" resultType="Blog" >
+	
+	</update> -->
+</mapper>

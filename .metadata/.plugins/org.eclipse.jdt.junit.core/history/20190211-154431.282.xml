@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="IOCTest.testFactory" project="Spring_01" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="testFactory" classname="spring.kewei.pojo.IOCTest" time="0.32"/>
+</testrun>

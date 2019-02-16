@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 对应未来程序应用的接口  dao层 接口的实现 包和接口放在一起  通过以下的接口去寻找对应的实现类  代替 implement-->
+<mapper namespace="com.kewei.mybatis.mapper.BlogMapper">
+
+	<!-- 使用  resultMap 的方式 来实现返回值  resultMp -->
+	<resultMap type="Blog" id="blogResultMap">
+		<result column="author_id" property="author"/>
+	</resultMap>
+	
+	<!-- 若没有定义别名 则需要指定出类型的绝对路径 -->
+	<!-- <select id="selectBlog" parameterType="int" resultType="com.kewei.mybatis.been.Blog" > -->
+	
+	<!-- 若没有定义别名 则需要指定出类型的绝对路径 -->
+	<select id="selectBlog" parameterType="int" resultType="Blog" >
+		select * from Blog  where id = #{id,jdbcType=INTEGER}
+	</select>
+	
+	<!-- 使用 $ 符号的方式来 查询  $ 是一个替换的作用 可以写成 $(value)-->
+	<select id="selectBlog" parameterType="int" resultType="Blog" >
+		select * from Blog  where id = ${id}
+	</select>
+	
+</mapper>

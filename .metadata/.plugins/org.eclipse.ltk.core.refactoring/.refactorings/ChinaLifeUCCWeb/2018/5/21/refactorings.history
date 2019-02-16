@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.netinfosz.business.atom.obsServer.Test.java&apos; to &apos;TestMain.java&apos;&#x0D;&#x0A;- Original project: &apos;ChinaLifeUCCWeb&apos;&#x0D;&#x0A;- Original element: &apos;com.netinfosz.business.atom.obsServer.Test.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.netinfosz.business.atom.obsServer.TestMain.java&apos;" description="Rename compilation unit &apos;Test.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.netinfosz.business.atom.obsServer{Test.java" name="TestMain.java" references="false" stamp="1527066575495" version="1.0"/>
+</session>

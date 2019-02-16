@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- 配置文件根节点  -->
+<configuration>
+	
+	<!-- 引入数据库连接配置 -->
+	<properties  resource="db.properties"></properties>
+	
+	<!-- 定义 mapper 配置文件中 sql语句的返回类型的 别名  -->
+	<typeAliases>
+		<!-- 1. 指定具体的类的决定路径 指定返回值 -->
+		<!-- <typeAlias type="com.kewei.mybatis.been.Blog"  alias="Blog"/> -->
+		<!-- 2.使用扫描包的方式 定义返回值的别名   会自动 使用类的类名来作为 别名-->
+		<package name="com.kewei.mybatis.been"/>
+		
+	</typeAliases>
+	
+	<!-- 定义数据源  environments标签内部可配置多个数据源-->
+	<environments default="development">
+	
+		<!-- 指定数据库环境配置 -->
+		<environment id="development">
+			 <!-- 事物管理器   使用 jdbc 自身的事务管理器 -->
+			 <transactionManager type="JDBC"/>
+			 
+			<!-- 获取数据库连接实例的数据源，一般使用连接池的方式 -->
+			<!-- property 标签的 value 值对应了 数据库配置文件的 jdbc.driver等 -->
+			 <dataSource type="POOLED">
+		        <property name="driver" value="${jdbc.driver}"/>
+		        <property name="url" value="${jdbc.url}"/>
+		        <property name="username" value="${jdbc.username}"/>
+		        <property name="password" value="${jdbc.password}"/>
+	      	</dataSource>	
+			
+		</environment>
+		<!-- <environment id="test"></environment>
+		<environment id="production"></environment> -->
+		
+	</environments>
+	
+	<!-- 定义映射文件 SQL语句映射文件 -->
+	<mappers>
+		<!--1. 使用配置路径 -->
+   		<mapper resource="com/kewei/mybatis/mapper/BlogMapper.xml"/>
+   		
+   		<!--2. 使用配置包路径 -->
+   		<package name="com.kewei.mybatis.mapper"/>
+   		
+  	</mappers>
+	
+	
+	
+	
+</configuration>

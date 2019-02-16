@@ -1,0 +1,38 @@
+package spring.kewei.serviceImpl;
+
+import javax.annotation.Resource;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import spring.kewei.service.UserService;
+
+// 创建容器
+@RunWith(SpringJUnit4ClassRunner.class)
+// 等同于  AbstractApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+@ContextConfiguration("classpath:applicationContext.xml")   //针对某个配置文件
+public class testAop {
+	
+	@Resource(name="userService")
+//	@Autowired  也可用
+	private UserService userService;
+	
+	@Test
+	public void testproperty(){
+		
+		userService.delete();
+	}
+	
+	@Test
+	public void testSave(){
+		
+		userService.save("haha");
+	}
+	
+	
+}

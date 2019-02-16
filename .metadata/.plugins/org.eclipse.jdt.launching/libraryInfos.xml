@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="F:\Java\JDK7u45" version="1.7.0_45">
+<bootpath>
+<entry path="F:\Java\JDK7u45\jre\lib\resources.jar"/>
+<entry path="F:\Java\JDK7u45\jre\lib\rt.jar"/>
+<entry path="F:\Java\JDK7u45\jre\lib\sunrsasign.jar"/>
+<entry path="F:\Java\JDK7u45\jre\lib\jsse.jar"/>
+<entry path="F:\Java\JDK7u45\jre\lib\jce.jar"/>
+<entry path="F:\Java\JDK7u45\jre\lib\charsets.jar"/>
+<entry path="F:\Java\JDK7u45\jre\lib\jfr.jar"/>
+<entry path="F:\Java\JDK7u45\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="F:\Java\JDK7u45\jre\lib\ext"/>
+<entry path="C:\Windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="F:\Java\JDK7u45\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="F:\JDK-1.8-32" version="1.8.0_171">
+<bootpath>
+<entry path="F:\JDK-1.8-32\jre\lib\resources.jar"/>
+<entry path="F:\JDK-1.8-32\jre\lib\rt.jar"/>
+<entry path="F:\JDK-1.8-32\jre\lib\sunrsasign.jar"/>
+<entry path="F:\JDK-1.8-32\jre\lib\jsse.jar"/>
+<entry path="F:\JDK-1.8-32\jre\lib\jce.jar"/>
+<entry path="F:\JDK-1.8-32\jre\lib\charsets.jar"/>
+<entry path="F:\JDK-1.8-32\jre\lib\jfr.jar"/>
+<entry path="F:\JDK-1.8-32\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="F:\JDK-1.8-32\jre\lib\ext"/>
+<entry path="C:\Windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="F:\JDK-1.8-32\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="F:\Jre-1.8-32" version="1.8.0_171">
+<bootpath>
+<entry path="F:\Jre-1.8-32\lib\resources.jar"/>
+<entry path="F:\Jre-1.8-32\lib\rt.jar"/>
+<entry path="F:\Jre-1.8-32\lib\sunrsasign.jar"/>
+<entry path="F:\Jre-1.8-32\lib\jsse.jar"/>
+<entry path="F:\Jre-1.8-32\lib\jce.jar"/>
+<entry path="F:\Jre-1.8-32\lib\charsets.jar"/>
+<entry path="F:\Jre-1.8-32\lib\jfr.jar"/>
+<entry path="F:\Jre-1.8-32\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="F:\Jre-1.8-32\lib\ext"/>
+<entry path="C:\Windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="F:\Jre-1.8-32\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

@@ -1,0 +1,31 @@
+package spring.kewei.service;
+
+public class UserServiceImpl implements UserService{
+
+	@Override
+	public void save(String name) {
+		
+		System.out.println("新增中。。。。。");
+	}
+
+	@Override
+	public void delete() {
+		// TODO Auto-generated method stub
+		System.out.println("删除中。。。。。");
+	}
+
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+		System.out.println("更改中。。。。。");
+	}
+
+	@Override
+	public void select() {
+		// TODO Auto-generated method stub
+		System.out.println("查询中。。。。。");
+	}
+	
+	
+
+}
